@@ -5,6 +5,8 @@ static int *creat_tab(int size)
 {
     int *tab = malloc(size * sizeof(int));
 
+    if (tab == NULL)
+        return NULL;
     for (int i = 0; i < size; i++) {
         tab[i] = i;
     }
@@ -21,7 +23,9 @@ int main()
         printf("%d ", tab[i]);
     }
     printf("\n");
-    free(tab);
+    if (tab != NULL)
+        free(tab);
+    tab = NULL;
     return 0;
 }
 
