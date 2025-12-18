@@ -2,11 +2,11 @@
 
 int len_str(char *str)
 {
-    int i = 0;
+    int len = 0;
 
-    while (str[i] != '\0')
-        i++;
-    return i;
+    while (str[len] != '\0')
+        len++;
+    return len;
 }
 
 int main()
